@@ -1,0 +1,64 @@
+h1{
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #0F1035;
+    text-align: center;
+}
+h3{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #365486;
+    text-align: center;
+
+}
+p{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    color:7FC7D9 ;
+    text-align: center;
+}
+body{
+    background-color: #97c5c3;
+}
+
+.resim-container {
+    width: 300px; /* Resim konteynırının genişliği */
+    height: 300px; /* Resim konteynırının yüksekliği */
+    border: 2px solid transparent; /* Kenarlık oluşturur ve başlangıçta saydam yapar */
+    border-radius: 50%; /* Kenarlık yuvarlatır (Daire şeklinde yapar) */
+    overflow: hidden; /* Resmin dışında kalan kısımları keser */
+    position: relative; /* Renkli kenarlık için gerekli olan pozisyonu ayarlar */
+    display: flex; /* İçeriği yatay ve dikey olarak ortalamak için */
+    justify-content: center; /* İçeriği yatay olarak ortalar */
+    align-items: center; /* İçeriği dikey olarak ortalar */
+  }
+  
+  .resim-container::after {
+    content: ''; /* Ek içerik ekler */
+    position: absolute; /* Mutlaka ana div içinde pozisyon alır */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid; /* Kenarlık oluşturur */
+    border-radius: 50%; /* Kenarlık yuvarlatır (Daire şeklinde yapar) */
+    animation: kenarlik-kayan-renk 5s infinite; /* Kayan renk animasyonu tanımlar */
+  }
+    
+  @keyframes kenarlik-kayan-renk {
+    0% { border-color: red; } /* Başlangıç rengi */
+    50% { border-color: blue; } /* Geçiş rengi */
+    100% { border-color: red; } /* Başlangıç rengine döner */
+  }
+  
+  .resim-container img {
+    width: 100%; /* Resmin genişliğini ayarlar */
+    height: 100%; /* Resmin orijinal oranına göre yüksekliğini ayarlar */
+    display: block; /* Resmi blok öğe olarak ayarlar */
+  }
+ 
+
+
+hr{
+    border-color: #08081b;   
+}
